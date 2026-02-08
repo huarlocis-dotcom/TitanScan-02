@@ -1,0 +1,12 @@
+
+{
+  "name": "TitanScan OS - Automotive Suite",
+  "description": "A high-end professional automotive diagnostic and programming platform with live data streaming, DTC analysis, and J2534 programming capabilities.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "electron": {
+    "productName": "TitanScan OS",
+    "executableName": "titanscan-os"
+  }
+}

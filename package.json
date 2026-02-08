@@ -1,0 +1,57 @@
+
+{
+  "name": "titanscan-os",
+  "version": "1.0.0",
+  "description": "TitanScan OS - Automotive Diagnostic & Engineering Suite",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "tsc",
+    "pack": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "typescript": "^5.0.0",
+    "electron-builder": "^24.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "build": {
+    "appId": "com.titanscan.os",
+    "productName": "TitanScan OS",
+    "copyright": "Copyright © 2024 Hugo Lopez Cisnero",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "index.html",
+      "index.tsx",
+      "App.tsx",
+      "types.ts",
+      "metadata.json",
+      "components/**/*",
+      "views/**/*"
+    ],
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ],
+      "icon": "https://cdn-icons-png.flaticon.com/512/3089/3089803.png"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.developer-tools"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    }
+  }
+}
